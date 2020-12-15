@@ -366,6 +366,9 @@ public class Prospector : MonoBehaviour {
     }
 
     // Return true if the two cards are adjacent in rank (A & K wrap around)
+    
+    //public bool To13 ()
+    
     public bool AdjacentRank(CardProspector c0, CardProspector c1)
     {
         // If either card is face-down, it's not adjacent.

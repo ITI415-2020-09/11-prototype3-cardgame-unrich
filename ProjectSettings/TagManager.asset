@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Card
+  - Bottom
+  - Top
+  - Deck
   layers:
   - Default
   - TransparentFX
@@ -53,9 +57,18 @@ TagManager:
   - name: Row3
     uniqueID: 1999001117
     locked: 0
-  - name: Discard
+  - name: Row4
     uniqueID: 2886981661
     locked: 0
-  - name: Draw
+  - name: Row5
     uniqueID: 1560594663
+    locked: 0
+  - name: Row6
+    uniqueID: 162906317
+    locked: 0
+  - name: Discard
+    uniqueID: 3025796441
+    locked: 0
+  - name: Draw
+    uniqueID: 2444108311
     locked: 0

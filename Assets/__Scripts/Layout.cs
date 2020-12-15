@@ -10,6 +10,7 @@ public class SlotDef
     public float x;
     public float y;
     public bool faceUp = false;
+    public bool lock1 = false;
     public string layerName = "Default";
     public int layerID = 0;
     public int id;
@@ -27,7 +28,7 @@ public class Layout : MonoBehaviour {
     public SlotDef drawPile;
     public SlotDef discardPile;
     // This holds all of the possible names for the layers set by layerID
-    public string[] sortingLayerNames = new string[] { "Row0", "Row1", "Row2", "Row3", "Discard", "Draw" };
+    public string[] sortingLayerNames = new string[] { "Row0", "Row1", "Row2", "Row3", "Row4", "Row5", "Row6", "Discard", "Draw" };
 
 	// This function is called to read in the LayoutXML.xml file
     public void ReadLayout(string xmlText)
@@ -69,7 +70,9 @@ public class Layout : MonoBehaviour {
             {
                 //pull additional attributes based on the type of this <slot>
                 case "slot":
-                    tSD.faceUp = (slotsX[i].att("faceup") == "1");
+                    tSD.faceUp = true;
+                    tSD.lock1 = (slotsX[i].att("lock") == "0");
+                    //tSD.faceUp = (slotsX[i].att("faceup") == "1");
                     tSD.id = int.Parse(slotsX[i].att("id"));
                     if (slotsX[i].HasAtt("hiddenby"))
                     {
